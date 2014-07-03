@@ -1455,3 +1455,7 @@ footer{
 		line-height: 150px;
 	}
 }
+
+#activity .social a:hover {
+    color: #000;
+}
