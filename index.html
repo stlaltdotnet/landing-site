@@ -132,7 +132,7 @@ p.getElementsByTagName("head")[0].appendChild(s)
         <div class="container">
           <div class="row">
             <div class="works">
-              <div class="col-md-6"><h2>Activity</h2></div>
+              <div class="col-md-6"><h2>Upcomming</h2></div>
               <div class="col-md-6">
                 <p class="left"></p>
               </div>
@@ -141,11 +141,57 @@ p.getElementsByTagName("head")[0].appendChild(s)
             <div class="clearfix"></div>
             <div class="divider_dark top"></div>
     
-            <!--Carousel-->
+            <!--Carousel
             <ul class="ch-grid center">
 
             </ul>
-            <!--Carousel-->
+            < Carousel-->
+
+            <div class="row">
+              
+              <div class="col-md-6" id="upcoming-events">
+                <!-- ko if: $data.length > 0 -->
+                <!-- ko foreach: $data -->
+                <!--Item Blog-->
+                <div class="row item_blog">
+                  <!--img_blog-->
+                  <div class="col-xs-12">
+
+                    <a href="javascript:void(0)" data-bind="attr: { href: meetingUrl }">
+                      <img data-bind="attr: { src: featuredImage }" /> 
+                    </a>
+                  </div>
+                  <!-- End img_blog-->  
+                  
+                  <!-- info blog-->  
+                  <div class="col-xs-12">
+                      <div class="info_blog">
+                        <!--date_blog-->
+                        <div class="date_blog">
+                          <h2><a href="javascript:void(0)" data-bind="attr: { href: meetingUrl }, text: eventTitle"></a></h2>
+                          <ul>
+                            <li><span data-bind="text: eventDate"></span></li>
+                            <li><i class="fa fa-users"></i><span data-bind="text: eventAttendees"></span></li>
+                          </ul>
+                        </div>
+                        <!--End date_blog-->
+
+                          <!--text_blog-->
+                          <div class="text_blog">
+                            <p data-bind="text: eventDescription"></p>
+                          </div>
+                          <!--End text_blog-->
+                      </div>
+                  </div>  
+                  <!-- End Info blog-->                  
+                </div>
+                <!-- /ko -->
+                <!-- /ko -->
+
+                <!-- ko if: $data.length == 0 -->
+                  <h1>No upcomming events!</h1>
+                <!-- /ko -->
+              </div>
 
             <div class="clearfix"></div>
             <div class="divider_dark"></div>
@@ -297,6 +343,8 @@ p.getElementsByTagName("head")[0].appendChild(s)
         <script src="js/smooth-scroll.js" type="text/javascript"></script>
         <!-- Bootstrap.js-->
         <script src="js/bootstrap.js"></script>
+        <script src="js/moment.js"></script>
+        <script src="js/knockout.js"></script>
         <!--fUNCTIONS-->
         <script type="text/javascript" src="js/jquery-func.js"></script>
       <!-- ======================= End JQuery libs =========================== -->

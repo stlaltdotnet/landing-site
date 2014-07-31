@@ -629,11 +629,10 @@ textarea.form-control{
 .item_blog:hover .hover_img_blog{
 	opacity: 1;
 }
-.info_blog{
+.info_blog {
+	background: rgba(0,0,0,0.5);
 	text-align: left;
-	width: 120%;
-	margin-left: -22%;
-	padding-top: 10px;
+	padding: 10px;
 }
 .date_blog{
 	border-bottom: 2px solid #000;	

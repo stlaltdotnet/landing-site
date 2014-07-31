@@ -1,3 +1,5 @@
+var events = ko.observableArray([]);
+
 $(document).ready(function(){
 
     //=================================== Totop  ===================================//
@@ -139,7 +141,37 @@ $(document).ready(function(){
 	    });  
 	  });  
 
-  
+  	//================================ Meetup Upcoming Meetings =============================//
+  	$.ajax({
+  		type:'GET', 
+  		url: 'http://api.meetup.com/2/events.json?group_id=1697346&status=upcoming&order=time&limited_events=False&desc=false&offset=0&callback=myfunc&photo-host=public&format=json&page=20&fields=&sig_id=154428222&sig=6aaf21ed95463f8a2a0d69f17e96c1ac54e7afab', 
+  		jsonpCallback: 'myfunc', 
+  		dataType: 'jsonp', 
+  		success: function(data){
+  			var eventData = data.results;
+
+  			for(var i = 0; i < eventData.length && i < 2; i++) {
+				var event = {
+					featuredImage: "",
+					meetingUrl: eventData[i].event_url,
+					eventTitle: eventData[i].name,
+					eventDate: moment(eventData[i].time).format('MMMM Do [at] h:mm a'),
+					eventAttendees: eventData[i].yes_rsvp_count,
+					eventDescription: ""
+				};
+
+				var desc = $('<div>').html(eventData[i].description),
+					primaryImg = desc.find('img').first();
+
+				event.featuredImage = primaryImg.attr('src');
+				primaryImg.remove();
+				event.eventDescription = desc.text().trim().substr(0, 200) + "...";
+
+				events.push(event);
+  			}
+
+	  	}
+	})
 });
 	
-
+ko.applyBindings(events);
