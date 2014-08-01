@@ -656,6 +656,7 @@ textarea.form-control{
 }
 .date_blog ul li i{
 	margin-left: 10px;
+	margin-right: 5px;
 }
 .date_blog ul li a:hover{
 	text-decoration: underline;
