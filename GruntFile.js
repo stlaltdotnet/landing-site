@@ -38,7 +38,6 @@ module.exports = function(grunt) {
 						"css/bootstrap/bootstrap-theme.css",
 						"js/fancybox/jquery.fancybox.css",
 						"css/scrollbar/jquery.mCustomScrollbar.css",
-						"css/icons/font-awesome.css",
 						"css/hover/style.css",
 						"css/carousel/carousel.css",
 						"css/carousel/owl.theme.css",
