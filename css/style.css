@@ -64,32 +64,6 @@
 /* ---------------------------------------------------------------------- */
 
 /* bootstrap.css  - include resetes ( Media querys, grid-responsive,layout).*/
-@import url("bootstrap/bootstrap.css");
-@import url("bootstrap/bootstrap-theme.css");
-/*jquery.fancybox.css  - Lightbox*/
-@import url("../js/fancybox/jquery.fancybox.css");
-/*scrollbar*/
-@import url("scrollbar/jquery.mCustomScrollbar.css");
-/*Icons*/
-@import url("icons/font-awesome.css");
-/*Hover Works*/
-@import url("hover/style.css");
-/*Carousel*/
-@import url("carousel/carousel.css");
-@import url("carousel/owl.theme.css");
-/*Anitmations*/
-@import url("animations/animate.css");
-/*Transitions*/
-@import url("transitions.css");
-/*Flickr*/
-@import url("flickr/flickr.css");
-/*Style Switcher*/
-@import url("skins/theme-options.css");
-/*Video*/
-@import url("video/video.css");
-/*Google Fonts*/
-@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
 
 /* Standar Styles --------------------------------------------------------*/
